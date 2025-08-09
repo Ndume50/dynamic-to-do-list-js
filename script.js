@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create task and remove button
     const taskItem = document.createElement('li');
     taskItem.textContent = taskText;
+    taskItem.classList.add('task-item'); // Add class to task item
 
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     removeButton.onclick = () => {
       taskList.removeChild(taskItem);
     };
-taskItem.appendChild(removeButton);
+ taskItem.appendChild(removeButton);
     taskList.appendChild(taskItem);
 
     // Clear task input
@@ -42,4 +43,3 @@ taskItem.appendChild(removeButton);
     }
   });
 });
-
